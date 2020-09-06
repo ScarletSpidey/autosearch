@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
+import Search from './components/Search'
+import DummyData from './data/dummydata'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+function App () {
+
+  const suggestions = [];
+  for (var i=0;i<DummyData["data"].length;i++){
+    suggestions.push(DummyData["data"][i]["employee_name"]);    
+  }
+
+
+  return(
+      <div className="">
+          <Header />
+          <Search suggestions={suggestions} />
+      </div>
   );
-}
+};
 
 export default App;
