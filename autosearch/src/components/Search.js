@@ -121,8 +121,8 @@ export class Search extends Component {
               );
             } else {
               suggestionList = (
-                <div className="no-options">
-                  <em>No Option!</em>
+                <div className="no-options text-white text-4xl font-medium title-font text-center">
+                  No Results...
                 </div>
               );
             }
